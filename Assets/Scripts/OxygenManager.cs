@@ -37,6 +37,13 @@ public class OxygenManager : MonoBehaviour
         CheckOxygenLevel();
     }
 
+    public void RestoreOxygen()
+    {
+        currentOxygen = maxOxygen; // Restaura el oxígeno al máximo
+        oxygenSlider.value = currentOxygen; // Actualiza el slider visual
+        Debug.Log("¡Oxígeno restaurado completamente!");
+    }
+
     void SimulateOxygenDepletion()
     {
         // Reducir oxígeno con el tiempo
