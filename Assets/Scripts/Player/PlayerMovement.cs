@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Velocidad de movimiento base
-    public float moveSpeed = 5f;
+    public float moveSpeed = 3f; // Reduce esta velocidad
 
     // Resistencia del agua (inercia)
-    public float drag = 5f;
+    public float drag = 7f; // Aumenta el drag para reducir la inercia
 
     private Vector2 velocity; // Velocidad actual del jugador
     private Rigidbody2D rb;
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public GasolineManager gasolineManager;
 
     // Velocidad máxima para evitar que se salga de la pantalla
-    public float maxSpeed = 10f;
+    public float maxSpeed = 5f; // Reduce el valor de maxSpeed para controlar la velocidad máxima
 
     void Start()
     {
@@ -75,6 +75,6 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         // Aplicamos la velocidad al Rigidbody
-        rb.velocity = velocity;
+        rb.velocity = Vector2.ClampMagnitude(velocity, maxSpeed); // Limitar velocidad en el Rigidbody
     }
 }
