@@ -1444,7 +1444,7 @@ MonoBehaviour:
   sprintDepletionRate: 20
   playerRb: {fileID: 135811463}
   normalSpeed: 5
-  sprintSpeed: 80000
+  sprintSpeed: 12
 --- !u!114 &1916154883
 MonoBehaviour:
   m_ObjectHideFlags: 0
