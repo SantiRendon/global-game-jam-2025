@@ -691,6 +691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1509470166}
   - component: {fileID: 1509470167}
+  - component: {fileID: 1509470168}
   m_Layer: 5
   m_Name: OxygenSlider
   m_TagString: Untagged
@@ -717,7 +718,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -214, y: 163}
+  m_AnchoredPosition: {x: 213, y: 169}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1509470167
@@ -765,12 +766,32 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1368026943}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 1
+  m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1509470168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509470165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72611d4743db8e34cbe76f7dbffaa4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oxygenSlider: {fileID: 1509470167}
+  maxOxygen: 100
+  oxygenDepletionRate: 5
+  maxIllumination: 1
+  minIllumination: 0.2
+  playerLight: {fileID: 0}
+  nearestOxygenSource: {fileID: 0}
+  detectionRadius: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
