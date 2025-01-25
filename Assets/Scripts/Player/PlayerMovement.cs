@@ -18,6 +18,12 @@ public class PlayerMovement : MonoBehaviour
     public float rotationYSmoothness = 2f; // Suavidad de la transición en el eje Y
     public float rotationZSmoothness = 5f; // Suavidad de la transición en el eje Z
 
+    // Referencia al GasolineManager
+    public GasolineManager gasolineManager;
+
+    // Velocidad máxima para evitar que se salga de la pantalla
+    public float maxSpeed = 10f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -32,7 +38,10 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxis("Vertical");
 
         // Calculamos la velocidad deseada
-        Vector2 targetVelocity = new Vector2(moveX, moveY) * moveSpeed;
+        Vector2 targetVelocity = new Vector2(moveX, moveY) * gasolineManager.CurrentSpeed;
+
+        // Limitar la velocidad para evitar que se salga de la pantalla
+        targetVelocity = Vector2.ClampMagnitude(targetVelocity, maxSpeed);
 
         // Interpolamos hacia la velocidad deseada para un movimiento más suave
         velocity = Vector2.Lerp(velocity, targetVelocity, Time.deltaTime * 10f);
