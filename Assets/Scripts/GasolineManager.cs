@@ -33,6 +33,12 @@ public class GasolineManager : MonoBehaviour
         }
     }
 
+    public void FillGasoline()
+    {
+        currentGasoline = maxGasoline; // Llena la gasolina al máximo
+        gasolineSlider.value = currentGasoline; // Actualiza el slider
+    }
+
     void Start()
     {
         // Inicializar el nivel de gasolina
@@ -87,4 +93,7 @@ public class GasolineManager : MonoBehaviour
         // Aplicar el movimiento al Rigidbody del jugador
         playerRb.velocity = inputDirection * CurrentSpeed;
     }
+
+   
+
 }
