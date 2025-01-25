@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3652288d4ed798458d84bc8acdcff68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gasolineSlider: {fileID: 0}
+  gasolineSlider: {fileID: 533065256}
   maxGasoline: 100
   sprintDepletionRate: 20
 --- !u!114 &533065256
