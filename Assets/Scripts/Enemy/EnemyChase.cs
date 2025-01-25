@@ -10,6 +10,13 @@ public class EnemyChase : MonoBehaviour
     public float moveSpeed = 3f; // Velocidad de movimiento del enemigo
 
     private bool isFollowing = false; // Indica si el enemigo está siguiendo al jugador
+    private Vector2 originalPosition; // Posición original del enemigo
+
+    void Start()
+    {
+        // Guardamos la posición inicial del enemigo
+        originalPosition = transform.position;
+    }
 
     void Update()
     {
@@ -35,6 +42,11 @@ public class EnemyChase : MonoBehaviour
         {
             FollowPlayer();
         }
+        // Si no está siguiendo, regresar a la posición original
+        else
+        {
+            ReturnToOriginalPosition();
+        }
     }
 
     void FollowPlayer()
@@ -44,5 +56,11 @@ public class EnemyChase : MonoBehaviour
 
         // Mover al enemigo hacia el jugador
         transform.position = Vector2.MoveTowards(transform.position, player.position, moveSpeed * Time.deltaTime);
+    }
+
+    void ReturnToOriginalPosition()
+    {
+        // Mover al enemigo de vuelta a su posición original
+        transform.position = Vector2.MoveTowards(transform.position, originalPosition, moveSpeed * Time.deltaTime);
     }
 }
