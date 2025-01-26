@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     // Velocidad de movimiento base
-    public float moveSpeed = 3f; // Reduce esta velocidad
+    public float moveSpeed = 3f;
 
     // Resistencia del agua (inercia)
-    public float drag = 7f; // Aumenta el drag para reducir la inercia
+    public float drag = 7f;
 
     private Vector2 velocity; // Velocidad actual del jugador
     private Rigidbody2D rb;
@@ -22,13 +22,23 @@ public class PlayerMovement : MonoBehaviour
     public GasolineManager gasolineManager;
 
     // Velocidad máxima para evitar que se salga de la pantalla
-    public float maxSpeed = 5f; // Reduce el valor de maxSpeed para controlar la velocidad máxima
+    public float maxSpeed = 5f;
+
+    // Referencia al Animator
+    private Animator animator;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0; // Sin gravedad en el agua
         rb.drag = drag; // Aplicamos resistencia
+
+        // Obtener referencia al Animator
+        animator = GetComponent<Animator>();
+        if (animator == null)
+        {
+            Debug.LogError("No se encontró un componente Animator en el jugador.");
+        }
     }
 
     void Update()
@@ -72,6 +82,10 @@ public class PlayerMovement : MonoBehaviour
                 // Aplicar ambas rotaciones (eje Y y Z)
                 transform.rotation = Quaternion.Euler(new Vector3(0, currentYRotation, currentZRotation));
             }
+
+            // Activar o desactivar la animación de correr
+            bool isMoving = velocity.magnitude > 0.1f; // Detectar si el jugador se está moviendo
+            animator.SetBool("correr", isMoving); // Cambiar el estado del parámetro "correr"
         }
         else
         {
@@ -79,10 +93,10 @@ public class PlayerMovement : MonoBehaviour
             Debug.LogWarning("GasolineManager no asignado en PlayerMovement.");
         }
     }
+
     void FixedUpdate()
     {
         // Aplicamos la velocidad al Rigidbody
         rb.velocity = Vector2.ClampMagnitude(velocity, maxSpeed); // Limitar velocidad en el Rigidbody
     }
-
 }

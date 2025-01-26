@@ -18,6 +18,8 @@ public class ObjectInteraction : MonoBehaviour
     private Quaternion rotacionInicial; // Rotación inicial del objeto
     private float tiempoFuera; // Contador de tiempo fuera
 
+    public Animator animator;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -77,6 +79,7 @@ public class ObjectInteraction : MonoBehaviour
             rb.gravityScale = gravedadCuandoActivo; // Aplicar la gravedad personalizada
             contadorActivo = false; // Detener el contador si el jugador regresa
             tiempoFuera = 0f; // Reiniciar el contador
+            animator.Play("pop");
         }
     }
 
@@ -103,5 +106,6 @@ public class ObjectInteraction : MonoBehaviour
         transform.position = new Vector3(x, y, posicionInicial.z);
 
         transform.rotation = rotacionInicial; // Restaurar la rotación inicial
+        animator.Play("idle");
     }
 }
