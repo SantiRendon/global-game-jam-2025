@@ -95,23 +95,4 @@ public class DestroyObject : MonoBehaviour
             new Vector3(respawnAreaMax.x - respawnAreaMin.x, respawnAreaMax.y - respawnAreaMin.y, 0)
         );
     }
-
-    /*public Respawn _respawn;
-
-    private void Update()
-    {
-        if( _respawn.cont > 1000)
-        {
-            Instantiate(_respawn.objeto, _respawn.respawns[_respawn.rand]);
-            Destroy(gameObject);
-        }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            _respawn.cont = 0;
-        }
-    }*/
 }
