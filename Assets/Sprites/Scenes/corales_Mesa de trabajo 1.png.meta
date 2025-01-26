@@ -1,0 +1,422 @@
+fileFormatVersion: 2
+guid: 4808c3782d35ba545809f5b6d4030dc4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_0
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 2498
+        width: 641
+        height: 497
+      alignment: 9
+      pivot: {x: 0.58158374, y: 0.49999952}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f4e863d9ac0c2049ad28c21f401c228
+      internalID: -1163899310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_1
+      rect:
+        serializedVersion: 2
+        x: 1592
+        y: 66
+        width: 1935
+        height: 1700
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c15287dafd875b4b8d88562cc458956
+      internalID: 1090133603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_2
+      rect:
+        serializedVersion: 2
+        x: 5554
+        y: 1504
+        width: 627
+        height: 536
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e7fe04390c854746b5540abbcf71bec
+      internalID: 1365098187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_3
+      rect:
+        serializedVersion: 2
+        x: 7123
+        y: 2341
+        width: 823
+        height: 745
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac5c0137a4c7eeb468e4f0b86f65dba9
+      internalID: -1902189600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_4
+      rect:
+        serializedVersion: 2
+        x: 8051
+        y: 1400
+        width: 536
+        height: 431
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d187b7d1c47c2945b07a393df4b7bd4
+      internalID: -493759056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_5
+      rect:
+        serializedVersion: 2
+        x: 9071
+        y: 1465
+        width: 653
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec7f7f8216da57644b7ccd2567f1e848
+      internalID: 330525285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_6
+      rect:
+        serializedVersion: 2
+        x: 9332
+        y: 2262
+        width: 602
+        height: 615
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f745ab9565243e0488305bda2c64b4f0
+      internalID: -1068877289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_7
+      rect:
+        serializedVersion: 2
+        x: 10587
+        y: 2576
+        width: 1778
+        height: 903
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74decf6682cacc947b5d4691960b3749
+      internalID: 1654474569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_8
+      rect:
+        serializedVersion: 2
+        x: 12208
+        y: 1596
+        width: 1085
+        height: 810
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f574240949a96f4990085c0ec070cc0
+      internalID: 1703672002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_9
+      rect:
+        serializedVersion: 2
+        x: 13110
+        y: 0
+        width: 1687
+        height: 903
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6955376ed84026e4f924c7bccb8863fb
+      internalID: 1871037300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_10
+      rect:
+        serializedVersion: 2
+        x: 18065
+        y: 981
+        width: 759
+        height: 785
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441dd8153b17d9449b77ad10c72f594a
+      internalID: 2042900166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_11
+      rect:
+        serializedVersion: 2
+        x: 19020
+        y: 27
+        width: 680
+        height: 810
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1deb89556e11604eb650959349344fb
+      internalID: -1879221082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_12
+      rect:
+        serializedVersion: 2
+        x: 13947
+        y: 2459
+        width: 667
+        height: 758
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c452e2a5a736d474ba32015f6b2c9bc3
+      internalID: 1381026871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: corales_Mesa de trabajo 1_13
+      rect:
+        serializedVersion: 2
+        x: 5619
+        y: 0
+        width: 1647
+        height: 1177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420ff658f8733df48a5a23924382c06f
+      internalID: 373152767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      corales_Mesa de trabajo 1_0: -1163899310
+      corales_Mesa de trabajo 1_1: 1090133603
+      corales_Mesa de trabajo 1_10: 2042900166
+      corales_Mesa de trabajo 1_11: -1879221082
+      corales_Mesa de trabajo 1_12: 1381026871
+      corales_Mesa de trabajo 1_13: 373152767
+      corales_Mesa de trabajo 1_2: 1365098187
+      corales_Mesa de trabajo 1_3: -1902189600
+      corales_Mesa de trabajo 1_4: -493759056
+      corales_Mesa de trabajo 1_5: 330525285
+      corales_Mesa de trabajo 1_6: -1068877289
+      corales_Mesa de trabajo 1_7: 1654474569
+      corales_Mesa de trabajo 1_8: 1703672002
+      corales_Mesa de trabajo 1_9: 1871037300
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
