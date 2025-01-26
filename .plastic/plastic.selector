@@ -1,0 +1,4 @@
+repository "global-game-jam-2025/global-game-jam-2025@4674041057611@cloud"
+  path "/"
+    br "/main"
+    co "/main"
