@@ -37,41 +37,48 @@ public class PlayerMovement : MonoBehaviour
         float moveX = Input.GetAxis("Horizontal");
         float moveY = Input.GetAxis("Vertical");
 
-        // Calculamos la velocidad deseada
-        Vector2 targetVelocity = new Vector2(moveX, moveY) * gasolineManager.CurrentSpeed;
-
-        // Limitar la velocidad para evitar que se salga de la pantalla
-        targetVelocity = Vector2.ClampMagnitude(targetVelocity, maxSpeed);
-
-        // Interpolamos hacia la velocidad deseada para un movimiento más suave
-        velocity = Vector2.Lerp(velocity, targetVelocity, Time.deltaTime * 10f);
-
-        // Cambiar rotación Y según la dirección horizontal
-        if (moveX < 0) // Mover a la izquierda
+        if (gasolineManager != null)
         {
-            targetYRotation = 180f; // Girar hacia la izquierda
+            // Calculamos la velocidad deseada utilizando la velocidad actual del GasolineManager
+            Vector2 targetVelocity = new Vector2(moveX, moveY) * gasolineManager.CurrentSpeed;
+
+            // Limitar la velocidad para evitar que se salga de la pantalla
+            targetVelocity = Vector2.ClampMagnitude(targetVelocity, maxSpeed);
+
+            // Interpolamos hacia la velocidad deseada para un movimiento más suave
+            velocity = Vector2.Lerp(velocity, targetVelocity, Time.deltaTime * 10f);
+
+            // Cambiar rotación Y según la dirección horizontal
+            if (moveX < 0) // Mover a la izquierda
+            {
+                targetYRotation = 180f; // Girar hacia la izquierda
+            }
+            else if (moveX > 0) // Mover a la derecha
+            {
+                targetYRotation = 0f; // Girar hacia la derecha
+            }
+
+            // Suavizar la rotación del eje Y
+            float currentYRotation = Mathf.LerpAngle(transform.eulerAngles.y, targetYRotation, Time.deltaTime * rotationYSmoothness);
+
+            // Rotar el sprite del jugador hacia la dirección del movimiento
+            if (velocity != Vector2.zero)
+            {
+                float angleZ = Mathf.Atan2(velocity.y, velocity.x) * Mathf.Rad2Deg; // Rotación del eje Z
+
+                // Suavizar la transición del eje Z
+                float currentZRotation = Mathf.LerpAngle(transform.eulerAngles.z, angleZ, Time.deltaTime * rotationZSmoothness);
+
+                // Aplicar ambas rotaciones (eje Y y Z)
+                transform.rotation = Quaternion.Euler(new Vector3(0, currentYRotation, currentZRotation));
+            }
         }
-        else if (moveX > 0) // Mover a la derecha
+        else
         {
-            targetYRotation = 0f; // Girar hacia la derecha
-        }
-
-        // Suavizar la rotación del eje Y
-        float currentYRotation = Mathf.LerpAngle(transform.eulerAngles.y, targetYRotation, Time.deltaTime * rotationYSmoothness);
-
-        // Rotar el sprite del jugador hacia la dirección del movimiento
-        if (velocity != Vector2.zero)
-        {
-            float angleZ = Mathf.Atan2(velocity.y, Mathf.Abs(velocity.x)) * Mathf.Rad2Deg; // Rotación del eje Z (sin invertir)
-
-            // Suavizar la transición del eje Z
-            float currentZRotation = Mathf.LerpAngle(transform.eulerAngles.z, angleZ, Time.deltaTime * rotationZSmoothness);
-
-            // Aplicar ambas rotaciones (eje Y y Z)
-            transform.rotation = Quaternion.Euler(new Vector3(0, currentYRotation, currentZRotation));
+            // Mostrar una advertencia si no se asigna el GasolineManager
+            Debug.LogWarning("GasolineManager no asignado en PlayerMovement.");
         }
     }
-
     void FixedUpdate()
     {
         // Aplicamos la velocidad al Rigidbody

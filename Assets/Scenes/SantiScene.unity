@@ -173,7 +173,7 @@ MonoBehaviour:
   drag: 2
   rotationYSmoothness: 2
   rotationZSmoothness: 5
-  gasolineManager: {fileID: 1916154882}
+  gasolineManager: {fileID: 1916154884}
   maxSpeed: 10
 --- !u!50 &135811463
 Rigidbody2D:
@@ -888,7 +888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1386026879}
   - component: {fileID: 1386026881}
-  - component: {fileID: 1386026880}
+  - component: {fileID: 1386026882}
   m_Layer: 5
   m_Name: OxygenSlider
   m_TagString: Untagged
@@ -918,26 +918,6 @@ RectTransform:
   m_AnchoredPosition: {x: 209, y: 175}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1386026880
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1386026878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72611d4743db8e34cbe76f7dbffaa4b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  oxygenSlider: {fileID: 1386026881}
-  maxOxygen: 100
-  oxygenDepletionRate: 5
-  maxIllumination: 1
-  minIllumination: 0.2
-  playerLight: {fileID: 0}
-  nearestOxygenSource: {fileID: 0}
-  detectionRadius: 10
 --- !u!114 &1386026881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,6 +969,26 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1386026882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386026878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72611d4743db8e34cbe76f7dbffaa4b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  oxygenSlider: {fileID: 1386026881}
+  maxOxygen: 100
+  oxygenDepletionRate: 5
+  maxIllumination: 1
+  minIllumination: 0.2
+  playerLight: {fileID: 0}
+  nearestOxygenSource: {fileID: 0}
+  detectionRadius: 10
 --- !u!1 &1407599798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916154881}
   - component: {fileID: 1916154883}
-  - component: {fileID: 1916154882}
+  - component: {fileID: 1916154884}
   m_Layer: 5
   m_Name: GasolineSlider
   m_TagString: Untagged
@@ -1570,24 +1570,6 @@ RectTransform:
   m_AnchoredPosition: {x: -216, y: 172}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1916154882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916154880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3652288d4ed798458d84bc8acdcff68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gasolineSlider: {fileID: 1386026881}
-  maxGasoline: 100
-  sprintDepletionRate: 20
-  playerRb: {fileID: 135811463}
-  normalSpeed: 5
-  sprintSpeed: 12
 --- !u!114 &1916154883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1639,6 +1621,24 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1916154884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1916154880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3652288d4ed798458d84bc8acdcff68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gasolineSlider: {fileID: 1916154883}
+  maxGasoline: 100
+  sprintDepletionRate: 20
+  playerRb: {fileID: 135811463}
+  normalSpeed: 5
+  sprintSpeed: 8
 --- !u!1 &1974320306
 GameObject:
   m_ObjectHideFlags: 0
