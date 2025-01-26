@@ -84,4 +84,5 @@ public class PlayerMovement : MonoBehaviour
         // Aplicamos la velocidad al Rigidbody
         rb.velocity = Vector2.ClampMagnitude(velocity, maxSpeed); // Limitar velocidad en el Rigidbody
     }
+
 }
